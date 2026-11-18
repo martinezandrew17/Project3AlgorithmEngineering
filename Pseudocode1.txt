@@ -1,0 +1,23 @@
+Algorithm LongestConsecutive(nums)
+
+    numbers = empty hash set
+
+    for each num in nums:
+        add num to numbers
+
+    longest = 0
+
+    for each num in numbers:
+
+        if (num - 1) is not in numbers:
+            current = current + 1
+            length = 1
+
+            while (current + 1) is in numbers:
+                current = current + 1
+                length = length + 1
+
+            if length > longest:
+                longest = length
+
+    return longest
